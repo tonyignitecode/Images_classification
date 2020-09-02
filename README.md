@@ -102,16 +102,6 @@ The number of examples from the training dataset used in the estimate of the err
 
 It is indicative of number of patterns shown to the network before the weight matrix is updated. If batch size is less, patterns would be less repeating and hence the weights would be all over the place and convergence would become difficult. If batch size is high learning would become slow as only after many iterations will the batch size change. It is recommend to try out batch sizes in powers of 2 (for better memory optimization) based on the data-size.  
     
-### Example of calculating the shape size ###  
-<img src='cnn_calc_shape.PNG'>  
-**f**: filter dimission  
-**s**: stride length  
-shape formula: ceil(N+f-1)/s)  
-**784**:   28 x 28 x 1 = 784    
-**6,272**: (28,28,1)x8 = (28,28,8) = 28x28x8 = 6,272  
-**1,568**: ceil((28–2+1)/2)=ceil(13.5)=14; (14,14,8) = 14 x 14 x 8 = 1568  
-**1,600**: cell((14–5+1)/1)=10; (10,10,16)=10 x 10 x 16 = 1600  
-**64**:    Dense Activation shape (64,1) states 64 hidden units are used in the dense layer  
 
 
 ### data set ###
